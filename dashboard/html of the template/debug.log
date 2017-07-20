@@ -1,0 +1,20 @@
+[0720/123102.753:INFO:rc_l10n_handler.cc(131)] Language not in the available languages list: en-US
+[0720/123102.753:INFO:rc_l10n_handler.cc(137)] Trying language from system preferred list: en-US
+[0720/123102.753:INFO:rc_l10n_handler.cc(180)] Retrying after adjustments: en-US
+[0720/123102.753:INFO:rc_l10n_handler.cc(137)] Trying language from system preferred list: en
+[0720/160401.282:INFO:rc_l10n_handler.cc(131)] Language not in the available languages list: en-US
+[0720/160401.282:INFO:rc_l10n_handler.cc(137)] Trying language from system preferred list: en-US
+[0720/160401.282:INFO:rc_l10n_handler.cc(180)] Retrying after adjustments: en-US
+[0720/160401.282:INFO:rc_l10n_handler.cc(137)] Trying language from system preferred list: en
+[0720/162011.817:INFO:rc_l10n_handler.cc(131)] Language not in the available languages list: en-US
+[0720/162011.817:INFO:rc_l10n_handler.cc(137)] Trying language from system preferred list: en-US
+[0720/162011.817:INFO:rc_l10n_handler.cc(180)] Retrying after adjustments: en-US
+[0720/162011.817:INFO:rc_l10n_handler.cc(137)] Trying language from system preferred list: en
+[0720/162118.692:INFO:rc_l10n_handler.cc(131)] Language not in the available languages list: en-US
+[0720/162118.692:INFO:rc_l10n_handler.cc(137)] Trying language from system preferred list: en-US
+[0720/162118.692:INFO:rc_l10n_handler.cc(180)] Retrying after adjustments: en-US
+[0720/162118.693:INFO:rc_l10n_handler.cc(137)] Trying language from system preferred list: en
+[0720/162147.833:INFO:rc_l10n_handler.cc(131)] Language not in the available languages list: en-US
+[0720/162147.834:INFO:rc_l10n_handler.cc(137)] Trying language from system preferred list: en-US
+[0720/162147.834:INFO:rc_l10n_handler.cc(180)] Retrying after adjustments: en-US
+[0720/162147.834:INFO:rc_l10n_handler.cc(137)] Trying language from system preferred list: en
