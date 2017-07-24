@@ -75,7 +75,7 @@
             </div>
 
             <ul class="nav">
-                <li class="active">
+                <li>
                     <a href="dashboard.php">
                         <i class="ti-panel"></i>
                         <p>Dashboard</p>
@@ -112,7 +112,7 @@
                 </li>
                 <?php
                     if($type == 'Super Admin'){
-                       echo "<li>
+                       echo "<li class='active'>
                                 <a href='userList.php'>
                                     <i class='ti-view-list-alt'></i>
                                     <p>Agents Information</p>
@@ -192,11 +192,12 @@
                                         <table class="table table-hover table-responsive table-striped">
                                             <thead class="topper font">
                                                 <tr class="font">
-                                                    <th class="text-center font" style="width: 20%;" >Full Name</th>
-                                                    <th class="text-center font" style="width: 15%;" >Area</th>
+                                                    <th class="text-center font" style="width: 10%;" >Full Name</th>
+                                                    <th class="text-center font" style="width: 4%;" >Area</th>
+                                                    <th class="text-center font" style="width: 4%;" >Team</th>
                                                     <th class="text-center font" style="width: 10%;" >Evaluator</th>
-                                                    <th class="text-center font" style="width: 10%;" >Date</th>
-                                                    <th class="text-center font" style="width: 10%;" >Score</th>
+                                                    <th class="text-center font" style="width: 5%;" >Date</th>
+                                                    <th class="text-center font" style="width: 4%;" >Score</th>
                                                 </tr>
                                             </thead>
 
@@ -211,6 +212,7 @@
                                                                 echo "<tr>";
                                                                 echo "<td class='text-center font'>".$row['name']."</td>";
                                                                 echo "<td class='text-center font'>".$row['area']."</td>";
+                                                                echo "<td class='text-center font'>".$row['team']."</td>";
                                                                 echo "<td class='text-center font'>".$row['evaluator']."</td>";
                                                                 echo "<td class='text-center font'>".$row['dateCompleted']."</td>";
                                                                 echo "<td class='text-center font'><strong>".$row['score']."</strong></td>";
@@ -234,6 +236,7 @@
                                                 <tr class="font">
                                                     <th class="text-center font" style="width: 20%;" >Full Name</th>
                                                     <th class="text-center font" style="width: 15%;" >Area</th>
+                                                    <th class="text-center font" style="width: 15%;" >Team</th>
                                                     <th class="text-center font" style="width: 10%;" >Evaluator</th>
                                                     <th class="text-center font" style="width: 10%;" >Date</th>
                                                     <th class="text-center font" style="width: 10%;" >Score</th>
@@ -253,8 +256,10 @@
                                                                 echo "<tr>";
                                                                 echo "<td class='text-center font'>".$row['name']."</td>";
                                                                 echo "<td class='text-center font'>".$row['area']."</td>";
+                                                                echo "<td class='text-center font'>".$row['team']."</td>";
                                                                 echo "<td class='text-center font'>".$row['evaluator']."</td>";
-                                                                echo "<td class='text-center font'>".$row['dateCompleted']."</td>";echo "<td class='text-center font'><strong>".$row['score']."</strong></td>";
+                                                                echo "<td class='text-center font'>".$row['dateCompleted']."</td>";
+                                                                echo "<td class='text-center font'><strong>".$row['score']."</strong></td>";
                                                                 echo "</tr>";
                                                             }
                                                         }
@@ -276,11 +281,10 @@
                                                 <tr class="font">
                                                     <th class="text-center font" style="width: 20%;" >Full Name</th>
                                                     <th class="text-center font" style="width: 15%;" >Area</th>
+                                                    <th class="text-center font" style="width: 15%;" >Team</th>
                                                     <th class="text-center font" style="width: 10%;" >Evaluator</th>
                                                     <th class="text-center font" style="width: 10%;" >Date</th>
                                                     <th class="text-center font" style="width: 10%;" >Score</th>
-
-
                                                 </tr>
                                             </thead>
 
@@ -288,7 +292,7 @@
                                                 <?php
 
                                                     
-                                                     $agent="SELECT CONCAT(lastname, ', ', firstname)'name', area, score, evaluator, dateCompleted FROM agentinfo WHERE area = 'OPS2' ORDER BY idCA ASC, lastname ASC ";
+                                                     $agent="SELECT CONCAT(lastname, ', ', firstname)'name', team, area, score, evaluator, dateCompleted FROM agentinfo WHERE area = 'OPS2' ORDER BY idCA ASC, lastname ASC ";
 
                                                     if ($result=mysqli_query($db, $agent)) {
                                                         if(mysqli_num_rows($result) > 0) {
@@ -296,6 +300,7 @@
                                                                 echo "<tr>";
                                                                 echo "<td class='text-center font'>".$row['name']."</td>";
                                                                 echo "<td class='text-center font'>".$row['area']."</td>";
+                                                                echo "<td class='text-center font'>".$row['team']."</td>";
                                                                 echo "<td class='text-center font'>".$row['evaluator']."</td>";
                                                                 echo "<td class='text-center font'>".$row['dateCompleted']."</td>";
                                                                 echo "<td class='text-center font'><strong>".$row['score']."</strong></td>";
@@ -320,11 +325,10 @@
                                                 <tr class="font">
                                                     <th class="text-center font" style="width: 20%;" >Full Name</th>
                                                     <th class="text-center font" style="width: 15%;" >Area</th>
-                                                    <th class="text-center font" style="width: 10%;" >Score</th>
+                                                    <th class="text-center font" style="width: 15%;" >Team</th>
                                                     <th class="text-center font" style="width: 10%;" >Evaluator</th>
                                                     <th class="text-center font" style="width: 10%;" >Date</th>
-
-
+                                                    <th class="text-center font" style="width: 10%;" >Score</th>
                                                 </tr>
                                             </thead>
 
@@ -332,7 +336,7 @@
                                                 <?php
 
                                                     
-                                                     $agent="SELECT CONCAT(lastname, ', ', firstname)'name', area, score, evaluator, dateCompleted FROM agentinfo WHERE area = 'OPS3' ORDER BY idCA ASC, lastname ASC ";
+                                                     $agent="SELECT CONCAT(lastname, ', ', firstname)'name', team, area, score, evaluator, dateCompleted FROM agentinfo WHERE area = 'OPS3' ORDER BY idCA ASC, lastname ASC ";
 
                                                     if ($result=mysqli_query($db, $agent)) {
                                                         if(mysqli_num_rows($result) > 0) {
@@ -340,9 +344,10 @@
                                                                 echo "<tr>";
                                                                 echo "<td class='text-center font'>".$row['name']."</td>";
                                                                 echo "<td class='text-center font'>".$row['area']."</td>";
-                                                                echo "<td class='text-center font'><strong>".$row['score']."</strong></td>";
+                                                                echo "<td class='text-center font'>".$row['team']."</td>";
                                                                 echo "<td class='text-center font'>".$row['evaluator']."</td>";
                                                                 echo "<td class='text-center font'>".$row['dateCompleted']."</td>";
+                                                                echo "<td class='text-center font'><strong>".$row['score']."</strong></td>";
                                                                 echo "</tr>";
                                                             }
                                                         }
@@ -364,11 +369,10 @@
                                                 <tr>
                                                     <th class="text-center font" style="width: 20%;" >Full Name</th>
                                                     <th class="text-center font" style="width: 15%;" >Area</th>
-                                                    <th class="text-center font" style="width: 10%;" >Score</th>
+                                                    <th class="text-center font" style="width: 15%;" >Team</th>
                                                     <th class="text-center font" style="width: 10%;" >Evaluator</th>
                                                     <th class="text-center font" style="width: 10%;" >Date</th>
-
-
+                                                    <th class="text-center font" style="width: 10%;" >Score</th>
                                                 </tr>
                                             </thead>
 
@@ -376,7 +380,7 @@
                                                 <?php
 
                                                     
-                                                     $agent="SELECT CONCAT(lastname, ', ', firstname)'name', area, score, evaluator, dateCompleted FROM agentinfo WHERE area = 'OPS4' ORDER BY idCA ASC, lastname ASC ";
+                                                     $agent="SELECT CONCAT(lastname, ', ', firstname)'name', team, area, score, evaluator, dateCompleted FROM agentinfo WHERE area = 'OPS4' ORDER BY idCA ASC, lastname ASC ";
 
                                                     if ($result=mysqli_query($db, $agent)) {
                                                         if(mysqli_num_rows($result) > 0) {
@@ -384,9 +388,10 @@
                                                                 echo "<tr>";
                                                                 echo "<td class='text-center font'>".$row['name']."</td>";
                                                                 echo "<td class='text-center font'>".$row['area']."</td>";
-                                                                echo "<td class='text-center font'><strong>".$row['score']."</strong></td>";
+                                                                echo "<td class='text-center font'>".$row['team']."</td>";
                                                                 echo "<td class='text-center font'>".$row['evaluator']."</td>";
                                                                 echo "<td class='text-center font'>".$row['dateCompleted']."</td>";
+                                                                echo "<td class='text-center font'><strong>".$row['score']."</strong></td>";
                                                                 echo "</tr>";
                                                             }
                                                         }
@@ -408,11 +413,10 @@
                                                 <tr>
                                                     <th class="text-center font" style="width: 20%;" >Full Name</th>
                                                     <th class="text-center font" style="width: 15%;" >Area</th>
-                                                    <th class="text-center font" style="width: 10%;" >Score</th>
+                                                    <th class="text-center font" style="width: 15%;" >Team</th>
                                                     <th class="text-center font" style="width: 10%;" >Evaluator</th>
                                                     <th class="text-center font" style="width: 10%;" >Date</th>
-
-
+                                                    <th class="text-center font" style="width: 10%;" >Score</th>
                                                 </tr>
                                             </thead>
 
@@ -420,7 +424,7 @@
                                                 <?php
 
                                                     
-                                                     $agent="SELECT CONCAT(lastname, ', ', firstname)'name', area, score, evaluator, dateCompleted FROM agentinfo WHERE area = 'OPS5' ORDER BY idCA ASC, lastname ASC ";
+                                                     $agent="SELECT CONCAT(lastname, ', ', firstname)'name', team, area, score, evaluator, dateCompleted FROM agentinfo WHERE area = 'OPS5' ORDER BY idCA ASC, lastname ASC ";
 
                                                     if ($result=mysqli_query($db, $agent)) {
                                                         if(mysqli_num_rows($result) > 0) {
@@ -428,9 +432,10 @@
                                                                 echo "<tr>";
                                                                 echo "<td class='text-center font'>".$row['name']."</td>";
                                                                 echo "<td class='text-center font'>".$row['area']."</td>";
-                                                                echo "<td class='text-center font'><strong>".$row['score']."</strong></td>";
+                                                                echo "<td class='text-center font'>".$row['team']."</td>";
                                                                 echo "<td class='text-center font'>".$row['evaluator']."</td>";
                                                                 echo "<td class='text-center font'>".$row['dateCompleted']."</td>";
+                                                                echo "<td class='text-center font'><strong>".$row['score']."</strong></td>";
                                                                 echo "</tr>";
                                                             }
                                                         }

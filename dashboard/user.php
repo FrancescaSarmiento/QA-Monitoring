@@ -36,7 +36,8 @@
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 
-
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet">
+    
     <!-- Bootstrap core CSS     -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
 
@@ -68,8 +69,8 @@
     	<div class="sidebar-wrapper">
             <div class="logo">
                 
-                <a href="#" class="simple-text">
-                    QA Monitoring
+                <a href="dashboard.php" class="simple-text">
+                   QUALITY ASSURANCE  MONITORING
                 </a>
                 
             </div>
@@ -110,6 +111,16 @@
                         <p>Evaluation Form</p>
                     </a>
                 </li>
+                 <?php
+                    if($type == 'Super Admin'){
+                       echo "<li>
+                                <a href='userList.php'>
+                                    <i class='ti-view-list-alt'></i>
+                                    <p>Agents Information</p>
+                                </a>
+                            </li>"; 
+                    }
+                ?>
                
                 
             </ul>
@@ -126,16 +137,14 @@
                         <span class="icon-bar bar2"></span>
                         <span class="icon-bar bar3"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Manage User</a>
+                    <a class="navbar-brand" href="#">User Manager</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <?php
                                 echo "<a href='editAccount?id=$id' class='simple-text'>";
-                                    echo "<strong>Hello, </strong>";
-
-                                    echo "<strong> <em>". $name . " </em></strong>";
+                                    echo "<strong> ". $name . "</strong>";
 
                                 echo "</a>";
                             ?>
@@ -166,8 +175,8 @@
                    <div class="col-lg-12">
                        <div class="card">
                             <div class="header">
-                                <h4 class="title">User List</h4>
-                                <p class="description">Manage the user's profile</p>
+                                <h4 class="title"><strong>USER LIST</strong></h4>
+                                <small>Manage the User's Profile</small>
                             </div>
                             <div class="content table-responsive table-full-width">
                             <?php
@@ -220,7 +229,7 @@
             <div class="container-fluid">
                 
                 <div class="copyright pull-right">
-                    &copy; OJT-Interns <script>document.write(new Date().getFullYear())</script>. Saint Louis University - SCIS. All Rights Reserved, made with <i class="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com">Creative Tim</a>
+                    &copy;Saint Louis University - SCIS. All Rights Reserved. made with <i class="fa fa-heart heart"></i> by OJT-Interns <script>document.write(new Date().getFullYear())</script>.
                 </div>
             </div>
         </footer>

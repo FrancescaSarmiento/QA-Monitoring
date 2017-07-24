@@ -1,0 +1,13 @@
+@font-face{
+    font-family: Myriad;
+    src: url(MyriadPro-Regular.otf);
+}
+
+.topper{
+    color: orangered; !important
+}
+
+.font{
+    font-family: Myriad; !important
+    font-size: 100%; !important
+}

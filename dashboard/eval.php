@@ -70,8 +70,8 @@
     	<div class="sidebar-wrapper">
             <div class="logo">
                 
-                <a href="#" class="simple-text">
-                    QA Monitoring
+                <a href="dashboard.php" class="simple-text font">
+                    QUALITY ASSURANCE MONITORING
                 </a>
                 
             </div>
@@ -109,9 +109,20 @@
                 <li class="active">
                     <a href="eval.php">
                         <i class="ti-file"></i>
-                        <p>Evaluation Form</p>
+                        <p>Evaluation Form </p>
                     </a>
                 </li>
+                
+                <?php
+                    if($type == 'Super Admin'){
+                       echo "<li>
+                                <a href='userList.php'>
+                                    <i class='ti-view-list-alt'></i>
+                                    <p>Agents Information</p>
+                                </a>
+                            </li>"; 
+                    }
+                ?>
             </ul>
     	</div>
     </div>
@@ -126,16 +137,14 @@
                         <span class="icon-bar bar2"></span>
                         <span class="icon-bar bar3"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Evaluation Form</a>
+                    <a class="navbar-brand" href="#">Evaluation Form Manipulation</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                              <?php
                                 echo "<a href='editAccount?id=$id' class='simple-text'>";
-                                    echo "<strong>Hello, </strong>";
-
-                                    echo "<strong> <em>". $name . " </em></strong>";
+                                echo "<strong>". $name . "</strong>";
 
                                 echo "</a>";
                             ?>
@@ -193,7 +202,7 @@
             <div class="container-fluid">
                 
                 <div class="copyright pull-right">
-                    &copy; OJT-Interns <script>document.write(new Date().getFullYear())</script>. Saint Louis University - SCIS. All Rights Reserved, made with <i class="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com">Creative Tim</a>
+                    &copy;Saint Louis University - SCIS. All Rights Reserved. made with <i class="fa fa-heart heart"></i> by OJT-Interns <script>document.write(new Date().getFullYear())</script>.
                 </div>
             </div>
         </footer>
